@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Hado.SL.HadoUIService" CodeBehind="HadoUIService.svc.cs" %>

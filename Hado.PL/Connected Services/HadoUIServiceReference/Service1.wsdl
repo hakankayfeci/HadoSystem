@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HadoUIService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:65393/HadoUIService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:65393/HadoUIService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:65393/HadoUIService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Hado.DL" />
+      <xsd:import schemaLocation="http://localhost:65393/HadoUIService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Hado.DL.ViewModel" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IHadoUIService_TeacherGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:TeacherGet" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_TeacherGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TeacherGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_TeacherAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:TeacherAdd" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_TeacherAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TeacherAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_TeacherRemove_InputMessage">
+    <wsdl:part name="parameters" element="tns:TeacherRemove" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_TeacherRemove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TeacherRemoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_TeacherEdit_InputMessage">
+    <wsdl:part name="parameters" element="tns:TeacherEdit" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_TeacherEdit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TeacherEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_TeacherList_InputMessage">
+    <wsdl:part name="parameters" element="tns:TeacherList" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_TeacherList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TeacherListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_UserGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserGet" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_UserGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_LessonGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LessonGet" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_LessonGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LessonGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_LessonAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:LessonAdd" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_LessonAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LessonAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_LessonRemove_InputMessage">
+    <wsdl:part name="parameters" element="tns:LessonRemove" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_LessonRemove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LessonRemoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_LessonEdit_InputMessage">
+    <wsdl:part name="parameters" element="tns:LessonEdit" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_LessonEdit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LessonEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_LessonList_InputMessage">
+    <wsdl:part name="parameters" element="tns:LessonList" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_LessonList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LessonListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionTypeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionTypeList" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionTypeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionGet" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAdd" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionRemove_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionRemove" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionRemove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionRemoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionEdit_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionEdit" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionEdit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionList" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionListByParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionListByParameter" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionListByParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionListByParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAnswerGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAnswerGet" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAnswerGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAnswerGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAnswerAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAnswerAdd" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAnswerAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAnswerAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAnswerRemove_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAnswerRemove" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAnswerRemove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAnswerRemoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAnswerEdit_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAnswerEdit" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAnswerEdit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAnswerEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAnswerListByQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAnswerListByQuestion" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAnswerListByQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAnswerListByQuestionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAnswerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAnswerList" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionAnswerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionAnswerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionVM_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionVM" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionVM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionVMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionVMRandom_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionVMRandom" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_QuestionVMRandom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuestionVMRandomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_GetSchool_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchool" />
+  </wsdl:message>
+  <wsdl:message name="IHadoUIService_GetSchool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchoolResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IHadoUIService">
+    <wsdl:operation name="TeacherGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/TeacherGet" message="tns:IHadoUIService_TeacherGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/TeacherGetResponse" message="tns:IHadoUIService_TeacherGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TeacherAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/TeacherAdd" message="tns:IHadoUIService_TeacherAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/TeacherAddResponse" message="tns:IHadoUIService_TeacherAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TeacherRemove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/TeacherRemove" message="tns:IHadoUIService_TeacherRemove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/TeacherRemoveResponse" message="tns:IHadoUIService_TeacherRemove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TeacherEdit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/TeacherEdit" message="tns:IHadoUIService_TeacherEdit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/TeacherEditResponse" message="tns:IHadoUIService_TeacherEdit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TeacherList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/TeacherList" message="tns:IHadoUIService_TeacherList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/TeacherListResponse" message="tns:IHadoUIService_TeacherList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/UserGet" message="tns:IHadoUIService_UserGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/UserGetResponse" message="tns:IHadoUIService_UserGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/Login" message="tns:IHadoUIService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/LoginResponse" message="tns:IHadoUIService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LessonGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/LessonGet" message="tns:IHadoUIService_LessonGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/LessonGetResponse" message="tns:IHadoUIService_LessonGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LessonAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/LessonAdd" message="tns:IHadoUIService_LessonAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/LessonAddResponse" message="tns:IHadoUIService_LessonAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LessonRemove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/LessonRemove" message="tns:IHadoUIService_LessonRemove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/LessonRemoveResponse" message="tns:IHadoUIService_LessonRemove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LessonEdit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/LessonEdit" message="tns:IHadoUIService_LessonEdit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/LessonEditResponse" message="tns:IHadoUIService_LessonEdit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LessonList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/LessonList" message="tns:IHadoUIService_LessonList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/LessonListResponse" message="tns:IHadoUIService_LessonList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionTypeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionTypeList" message="tns:IHadoUIService_QuestionTypeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionTypeListResponse" message="tns:IHadoUIService_QuestionTypeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionGet" message="tns:IHadoUIService_QuestionGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionGetResponse" message="tns:IHadoUIService_QuestionGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAdd" message="tns:IHadoUIService_QuestionAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAddResponse" message="tns:IHadoUIService_QuestionAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionRemove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionRemove" message="tns:IHadoUIService_QuestionRemove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionRemoveResponse" message="tns:IHadoUIService_QuestionRemove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionEdit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionEdit" message="tns:IHadoUIService_QuestionEdit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionEditResponse" message="tns:IHadoUIService_QuestionEdit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionList" message="tns:IHadoUIService_QuestionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionListResponse" message="tns:IHadoUIService_QuestionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionListByParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionListByParameter" message="tns:IHadoUIService_QuestionListByParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionListByParameterResponse" message="tns:IHadoUIService_QuestionListByParameter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAnswerGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAnswerGet" message="tns:IHadoUIService_QuestionAnswerGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAnswerGetResponse" message="tns:IHadoUIService_QuestionAnswerGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAnswerAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAnswerAdd" message="tns:IHadoUIService_QuestionAnswerAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAnswerAddResponse" message="tns:IHadoUIService_QuestionAnswerAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAnswerRemove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAnswerRemove" message="tns:IHadoUIService_QuestionAnswerRemove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAnswerRemoveResponse" message="tns:IHadoUIService_QuestionAnswerRemove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAnswerEdit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAnswerEdit" message="tns:IHadoUIService_QuestionAnswerEdit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAnswerEditResponse" message="tns:IHadoUIService_QuestionAnswerEdit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAnswerListByQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAnswerListByQuestion" message="tns:IHadoUIService_QuestionAnswerListByQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAnswerListByQuestionResponse" message="tns:IHadoUIService_QuestionAnswerListByQuestion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAnswerList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAnswerList" message="tns:IHadoUIService_QuestionAnswerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionAnswerListResponse" message="tns:IHadoUIService_QuestionAnswerList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionVM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionVM" message="tns:IHadoUIService_QuestionVM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionVMResponse" message="tns:IHadoUIService_QuestionVM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuestionVMRandom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/QuestionVMRandom" message="tns:IHadoUIService_QuestionVMRandom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/QuestionVMRandomResponse" message="tns:IHadoUIService_QuestionVMRandom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHadoUIService/GetSchool" message="tns:IHadoUIService_GetSchool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHadoUIService/GetSchoolResponse" message="tns:IHadoUIService_GetSchool_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IHadoUIService" type="tns:IHadoUIService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TeacherGet">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/TeacherGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TeacherAdd">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/TeacherAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TeacherRemove">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/TeacherRemove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TeacherEdit">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/TeacherEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TeacherList">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/TeacherList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserGet">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/UserGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LessonGet">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/LessonGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LessonAdd">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/LessonAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LessonRemove">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/LessonRemove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LessonEdit">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/LessonEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LessonList">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/LessonList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionTypeList">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionTypeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionGet">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAdd">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionRemove">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionRemove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionEdit">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionList">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionListByParameter">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionListByParameter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAnswerGet">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionAnswerGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAnswerAdd">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionAnswerAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAnswerRemove">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionAnswerRemove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAnswerEdit">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionAnswerEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAnswerListByQuestion">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionAnswerListByQuestion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionAnswerList">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionAnswerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionVM">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionVM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuestionVMRandom">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/QuestionVMRandom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchool">
+      <soap:operation soapAction="http://tempuri.org/IHadoUIService/GetSchool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HadoUIService">
+    <wsdl:port name="BasicHttpBinding_IHadoUIService" binding="tns:BasicHttpBinding_IHadoUIService">
+      <soap:address location="http://localhost:65393/HadoUIService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

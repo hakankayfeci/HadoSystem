@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F7268E5-1A22-464D-8E8C-175EA33B0EBB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hado.PL</RootNamespace>
+    <AssemblyName>Hado.PL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\HadoUIServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exam\Deneme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exam\Deneme.Designer.cs">
+      <DependentUpon>Deneme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exam\_CreateExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exam\_CreateExam.Designer.cs">
+      <DependentUpon>_CreateExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exam\_RegisteredExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Exam\_RegisteredExam.Designer.cs">
+      <DependentUpon>_RegisteredExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lesson\_AddLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Lesson\_AddLesson.Designer.cs">
+      <DependentUpon>_AddLesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lesson\_DeleteLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Lesson\_DeleteLesson.Designer.cs">
+      <DependentUpon>_DeleteLesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lesson\_UpdateLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Lesson\_UpdateLesson.Designer.cs">
+      <DependentUpon>_UpdateLesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Question\_AddQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Question\_AddQuestion.Designer.cs">
+      <DependentUpon>_AddQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Question\_DeleteQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Question\_DeleteQuestion.Designer.cs">
+      <DependentUpon>_DeleteQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Question\_UpdateQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Question\_UpdateQuestion.Designer.cs">
+      <DependentUpon>_UpdateQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Teacher\_AddTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Teacher\_AddTeacher.Designer.cs">
+      <DependentUpon>_AddTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Teacher\_DeleteTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Teacher\_DeleteTeacher.Designer.cs">
+      <DependentUpon>_DeleteTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Teacher\_UpdateTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Teacher\_UpdateTeacher.Designer.cs">
+      <DependentUpon>_UpdateTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Exam\Deneme.resx">
+      <DependentUpon>Deneme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exam\_CreateExam.resx">
+      <DependentUpon>_CreateExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exam\_RegisteredExam.resx">
+      <DependentUpon>_RegisteredExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lesson\_AddLesson.resx">
+      <DependentUpon>_AddLesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lesson\_DeleteLesson.resx">
+      <DependentUpon>_DeleteLesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lesson\_UpdateLesson.resx">
+      <DependentUpon>_UpdateLesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Question\_AddQuestion.resx">
+      <DependentUpon>_AddQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Question\_DeleteQuestion.resx">
+      <DependentUpon>_DeleteQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Question\_UpdateQuestion.resx">
+      <DependentUpon>_UpdateQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Teacher\_AddTeacher.resx">
+      <DependentUpon>_AddTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Teacher\_DeleteTeacher.resx">
+      <DependentUpon>_DeleteTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Teacher\_UpdateTeacher.resx">
+      <DependentUpon>_UpdateTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Connected Services\HadoUIServiceReference\HadoUIService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HadoUIServiceReference\HadoUIService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HadoUIServiceReference\HadoUIService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HadoUIServiceReference\HadoUIService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HadoUIServiceReference\Service1.wsdl" />
+    <None Include="Properties\DataSources\Hado.DL.Lesson.datasource" />
+    <None Include="Properties\DataSources\Hado.DL.Question.datasource" />
+    <None Include="Properties\DataSources\Hado.DL.QuestionAnswer.datasource" />
+    <None Include="Properties\DataSources\Hado.DL.QuestionType.datasource" />
+    <None Include="Properties\DataSources\Hado.DL.School.datasource" />
+    <None Include="Properties\DataSources\Hado.DL.Teacher.datasource" />
+    <None Include="Properties\DataSources\Hado.DL.User.datasource" />
+    <None Include="Properties\DataSources\Hado.DL.ViewModel.QuestionViewModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExamLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SinavKagidi.docx" />
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher_profesor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lesson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\idea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hadoLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saved.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\HadoUIServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HadoUIServiceReference\HadoUIService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HadoUIServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HadoUIServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HadoUIServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\HaDoSystem\Hado.DL\Hado.DL.csproj">
+      <Project>{fae52595-d09e-4a47-b7bb-77d3b17ac404}</Project>
+      <Name>Hado.DL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HaDoSystem\Hado.BL\Hado.BL.csproj">
+      <Project>{06331261-3697-4AD7-9BAD-55AC92EBF42F}</Project>
+      <Name>Hado.BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

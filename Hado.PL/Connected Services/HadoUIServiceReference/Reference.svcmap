@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c806d1e3-b43d-4601-860d-176b3b06c3c6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:65393/HadoUIService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HadoUIService.disco" MetadataType="Disco" ID="4585aae4-a826-4687-a0d7-e19a76b68d48" SourceId="1" SourceUrl="http://localhost:65393/HadoUIService.svc?disco" />
+    <MetadataFile FileName="HadoUIService3.xsd" MetadataType="Schema" ID="39bcca1a-1bd6-43ad-bf34-f15dceebb122" SourceId="1" SourceUrl="http://localhost:65393/HadoUIService.svc?xsd=xsd3" />
+    <MetadataFile FileName="HadoUIService1.xsd" MetadataType="Schema" ID="25f63643-2ff1-45ab-8664-8eb4145487d3" SourceId="1" SourceUrl="http://localhost:65393/HadoUIService.svc?xsd=xsd2" />
+    <MetadataFile FileName="HadoUIService2.xsd" MetadataType="Schema" ID="6847b5b3-84bd-4983-8a79-6435d935c5bf" SourceId="1" SourceUrl="http://localhost:65393/HadoUIService.svc?xsd=xsd1" />
+    <MetadataFile FileName="HadoUIService.xsd" MetadataType="Schema" ID="ca15fe6c-b5fa-4e1e-b027-b9538926add2" SourceId="1" SourceUrl="http://localhost:65393/HadoUIService.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="ff9bed2a-67a5-4a6e-820c-1de702d64694" SourceId="1" SourceUrl="http://localhost:65393/HadoUIService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="64ecaa0a82034763a16825b068288353" Name="Diagram1">
+        <EntityTypeShape EntityType="ExamSystemModel.Administator" Width="1.5" PointX="0.75" PointY="0.5" />
+        <EntityTypeShape EntityType="ExamSystemModel.ExamType" Width="1.5" PointX="2.375" PointY="0.5" />
+        <EntityTypeShape EntityType="ExamSystemModel.Lesson" Width="1.5" PointX="0.75" PointY="2" />
+        <EntityTypeShape EntityType="ExamSystemModel.QuestionAnswer" Width="1.5" PointX="2.375" PointY="2.25" />
+        <EntityTypeShape EntityType="ExamSystemModel.QuestionType" Width="1.5" PointX="4" PointY="2.625" />
+        <EntityTypeShape EntityType="ExamSystemModel.RecordedExam" Width="1.5" PointX="5.625" PointY="0.5" />
+        <EntityTypeShape EntityType="ExamSystemModel.Role" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ExamSystemModel.School" Width="1.5" PointX="2.375" PointY="4" />
+        <EntityTypeShape EntityType="ExamSystemModel.Teacher" Width="1.5" PointX="5.75" PointY="2.625" />
+        <EntityTypeShape EntityType="ExamSystemModel.User" Width="1.5" PointX="4" PointY="4.125" />
+        <EntityTypeShape EntityType="ExamSystemModel.Question" Width="1.5" PointX="4" PointY="0.625" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

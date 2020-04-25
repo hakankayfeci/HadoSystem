@@ -1,0 +1,15 @@
+C:\Projects\HadoSystem\Hado.BL\bin\Debug\Hado.BL.dll.config
+C:\Projects\HadoSystem\Hado.BL\bin\Debug\Hado.BL.dll
+C:\Projects\HadoSystem\Hado.BL\bin\Debug\Hado.BL.pdb
+C:\Projects\HadoSystem\Hado.BL\bin\Debug\EntityFramework.dll
+C:\Projects\HadoSystem\Hado.BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\HadoSystem\Hado.BL\bin\Debug\Hado.DL.dll
+C:\Projects\HadoSystem\Hado.BL\bin\Debug\Hado.DL.pdb
+C:\Projects\HadoSystem\Hado.BL\bin\Debug\Hado.DL.dll.config
+C:\Projects\HadoSystem\Hado.BL\bin\Debug\EntityFramework.xml
+C:\Projects\HadoSystem\Hado.BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\HadoSystem\Hado.BL\obj\Debug\Hado.BL.csprojAssemblyReference.cache
+C:\Projects\HadoSystem\Hado.BL\obj\Debug\Hado.BL.csproj.CoreCompileInputs.cache
+C:\Projects\HadoSystem\Hado.BL\obj\Debug\Hado.BL.csproj.CopyComplete
+C:\Projects\HadoSystem\Hado.BL\obj\Debug\Hado.BL.dll
+C:\Projects\HadoSystem\Hado.BL\obj\Debug\Hado.BL.pdb

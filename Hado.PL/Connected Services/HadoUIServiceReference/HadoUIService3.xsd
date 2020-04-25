@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Hado.DL.ViewModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Hado.DL.ViewModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfQuestionViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QuestionViewModel" nillable="true" type="tns:QuestionViewModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQuestionViewModel" nillable="true" type="tns:ArrayOfQuestionViewModel" />
+  <xs:complexType name="QuestionViewModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LessonId" type="xs:int" />
+      <xs:element minOccurs="0" name="LessonName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QAId" type="xs:int" />
+      <xs:element minOccurs="0" name="Question1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuestionAnswers" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuestionId" type="xs:int" />
+      <xs:element minOccurs="0" name="QuestionType" type="xs:int" />
+      <xs:element minOccurs="0" name="QuestionTypee" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QuestionViewModel" nillable="true" type="tns:QuestionViewModel" />
+</xs:schema>
